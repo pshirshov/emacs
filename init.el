@@ -1,4 +1,4 @@
-n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Paths
 (add-to-list 'load-path "~/.emacs.d")
 
@@ -12,20 +12,23 @@ n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (let ((default-directory "~/.emacs.d/packages/"))
   (normal-top-level-add-subdirs-to-load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(desktop-save-mode 1)
-
-;disable backup
-(setq backup-inhibited t)
-
-
 (require 'fwr-visual)
 (require 'fwr-tabbar)
 (require 'fwr-hotkeys)
 (require 'fwr-python)
 (require 'fwr-flymake)
 (require 'fwr-yas)
-
+(require 'fwr-backup)
+(require 'fwr-latex)
 (require 'init-company-mode)
+
+;(desktop-save-mode 1)
+
+;(require  'wcy-desktop)
+;(wcy-desktop-init)
+
+(require 'session)
+(add-hook 'after-init-hook 'session-initialize)
 
 ;(add-hook 'find-file-hook 'company-mode)
 ;(require 'auto-complete)
@@ -49,11 +52,6 @@ n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; (add-hook 'python-mode-hook
 ;        (lambda () 
 ;          (add-to-list 'ac-sources 'ac-source-company-ropemacs)))
-
-
+;
 ;(require 'magit)
 ;(global-set-key "\C-xg" 'magit-status)
-(require 'tex-site)
-(require 'preview-latex)
-
-;(desktop-save-mode 1)

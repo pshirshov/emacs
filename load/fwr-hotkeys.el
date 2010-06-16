@@ -1,7 +1,7 @@
 (global-set-key (kbd "C-z") 'undo)
-(global-set-key (kbd "<backtab>") 'tabbar-backward-tab)
+;(global-set-key (kbd "<backtab>") 'tabbar-backward-tab)
 ;(global-set-key (kbd "C-x b") 'ibuffer)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+;(global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key [?\C-x ?\C-g] 'goto-line) 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Indentation

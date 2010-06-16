@@ -9,7 +9,8 @@
 (load "color-theme")
 (if window-system
        (color-theme-infodoc)
-       (color-theme-clarity))
+;       (color-theme-clarity))
+)
 
 ;(require 'pager)
 
@@ -73,5 +74,17 @@
 (setq mark-even-if-inactive t)    ; Defined in `simple.el'.
 (setq highlight-nonselected-windows t)  ; Highlight region everywhere.
 (setq standard-indent 4)
+
+; ibuffer
+(require 'ibuffer)
+(setq ibuffer-default-sorting-mode 'filename/process)
+(setq ibuffer-always-show-last-buffer t)
+(setq ibuffer-view-ibuffer t)
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers 
+
+(require 'whitespace)
 
 (provide 'fwr-visual)

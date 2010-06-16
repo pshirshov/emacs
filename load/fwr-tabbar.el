@@ -4,6 +4,8 @@
 
 (global-set-key (kbd "M-<left>") 'tabbar-backward-tab)
 (global-set-key (kbd "M-<right>") 'tabbar-forward-tab)
+(global-set-key (kbd "ESC <left>") 'tabbar-backward-tab)
+(global-set-key (kbd "ESC <right>") 'tabbar-forward-tab)
 
 (custom-set-faces
  '(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
