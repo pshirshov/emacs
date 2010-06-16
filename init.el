@@ -55,3 +55,11 @@
 ;
 ;(require 'magit)
 ;(global-set-key "\C-xg" 'magit-status)
+
+(require 'diminish)
+(eval-after-load "flymake" '(diminish 'flymake-mode " FM"))
+(eval-after-load "flymake" '(diminish 'autopair-mode " P"))
+;(eval-after-load "flymake" '(diminish 'company-mode "CO"))
+(eval-after-load "flymake" '(diminish 'highlight-parentheses-mode " H"))
+(eval-after-load "flymake" '(diminish 'yas/minor-mode " YS"))
+(eval-after-load "flymake" '(diminish 'ropemacs-mode " R"))
