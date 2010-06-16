@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Paths
 (add-to-list 'load-path "~/.emacs.d")
 
@@ -12,6 +12,11 @@
 (let ((default-directory "~/.emacs.d/packages/"))
   (normal-top-level-add-subdirs-to-load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;(desktop-save-mode 1)
+
+;disable backup
+(setq backup-inhibited t)
+
 
 (require 'fwr-visual)
 (require 'fwr-tabbar)
@@ -51,3 +56,4 @@
 (require 'tex-site)
 (require 'preview-latex)
 
+;(desktop-save-mode 1)

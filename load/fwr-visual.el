@@ -1,19 +1,20 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
+;(global-hl-line-mode 1)
+
 ; Color theme
 (require 'color-theme) 
 (color-theme-initialize)
 (load "color-theme")
 (if window-system
        (color-theme-infodoc)
-       (color-theme-ld-dark))
+       (color-theme-clarity))
 
 ;(require 'pager)
 
 (global-font-lock-mode 1)
 (setq use-file-dialog nil)
-(color-theme-initialize)
 
 ;Show column numbers
 (column-number-mode 1)
@@ -28,8 +29,9 @@
 
 ;Line by line scrolling
 (setq scroll-step 1)
-(setq inhibit-startup-message t)
+(setq scroll-margin 2)
 
+(setq inhibit-startup-message t)
 (tool-bar-mode -1)
 ;(scroll-bar-mode -1)
 
@@ -49,7 +51,7 @@
   ;'(tool-bar-mode nil)
   ) ;;вот он тут точно не нужен
 
-(setq scroll-margin 2)
+
 (show-paren-mode t) ; highlight parent brace
 (global-hi-lock-mode t) ; highlight region by regexp
 (setq require-final-newline t)
@@ -70,6 +72,6 @@
 ;; Be able to use the mark even if it is inactive.
 (setq mark-even-if-inactive t)    ; Defined in `simple.el'.
 (setq highlight-nonselected-windows t)  ; Highlight region everywhere.
-
+(setq standard-indent 4)
 
 (provide 'fwr-visual)
