@@ -58,8 +58,8 @@
 
 (require 'diminish)
 (eval-after-load "flymake" '(diminish 'flymake-mode " FM"))
-(eval-after-load "flymake" '(diminish 'autopair-mode " P"))
-;(eval-after-load "flymake" '(diminish 'company-mode "CO"))
-(eval-after-load "flymake" '(diminish 'highlight-parentheses-mode " H"))
-(eval-after-load "flymake" '(diminish 'yas/minor-mode " YS"))
-(eval-after-load "flymake" '(diminish 'ropemacs-mode " R"))
+(eval-after-load "autopair" '(diminish 'autopair-mode " PM"))
+(eval-after-load "highlight-parentheses" '(diminish 'highlight-parentheses-mode " HL"))
+(eval-after-load "yasnippet" '(diminish 'yas/minor-mode " YS"))
+(eval-after-load "pymacs" '(diminish 'ropemacs-mode " RM"))
+(eval-after-load "company" '(diminish 'company-mode "CO"))
