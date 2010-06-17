@@ -13,8 +13,8 @@
 (setq backup-directory-alist ( cons '( "." . "~/.saves") backup-directory-alist )) 
  
 (defun force-backup-of-buffer ()
-    (let ((buffer-backed-up nil))
-      (backup-buffer)))
+  (let ((buffer-backed-up nil))
+    (backup-buffer)))
  
 (add-hook 'before-save-hook  'force-backup-of-buffer)
 

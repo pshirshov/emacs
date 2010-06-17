@@ -1,17 +1,25 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Paths
-(add-to-list 'load-path "~/.emacs.d")
+(let (
+      (eldir "~/.emacs.d") ; base path for loading elisp files
+      (elsource "~/.emacs.d")  ; path to elisp sources
+     )
+  (add-to-list 'load-path elsource) ; directory with cache manager
+  (require 'byte-code-cache)
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Setup load paths
+  (defun  add-to-path (dir)
+    (add-to-list 'load-path
+                 (format "%s/%s" eldir dir)))
 
-(defun  add-to-path (dir)
- (add-to-list 'load-path
- (format "~/.emacs.d/%s" dir)))
+  (add-to-path 'load) ; initialization
+  (add-to-path 'packages) ; additional packages
 
-(add-to-path 'load) ; initialization
-(add-to-path 'packages) ; additional packages
-
-(let ((default-directory "~/.emacs.d/packages/"))
-  (normal-top-level-add-subdirs-to-load-path))
+  (let ((default-directory (format "%s/packages/" eldir)))
+    (normal-top-level-add-subdirs-to-load-path))
+)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (require 'fwr-visual)
 (require 'fwr-tabbar)
 (require 'fwr-hotkeys)
@@ -22,7 +30,7 @@
 (require 'fwr-latex)
 (require 'init-company-mode)
 
-;(desktop-save-mode 1)
+;(desktop-save-mode 1) ; don't work with pymacs
 
 ;(require  'wcy-desktop)
 ;(wcy-desktop-init)
