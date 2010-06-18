@@ -1,3 +1,12 @@
+;; Important notes:
+;; - X support in emacs is required for tabbar
+;; - Required software: 
+;;   common: color-theme, yasnippet, dropdown-list, session
+;;   python: python-mode, pyflakes, ropemacs,
+;; - ropemode >= 1.0 rc should be installed 
+;;   (easy_install ropemode 
+;;     or 
+;;   hg clone from http://bitbucket.org/agr/ropemode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Paths
 (let (

@@ -87,6 +87,8 @@
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers 
 
+(setq whitespace-style '(trailing lines-tail space-after-tab space-before-tab tab-mark indentations))
 (require 'whitespace)
+(global-whitespace-mode)
 
 (provide 'fwr-visual)
