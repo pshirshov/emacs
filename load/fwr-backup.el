@@ -6,6 +6,7 @@
 (setq version-control t)
 (setq delete-old-versions t)
 (setq backup-by-copying-when-linked t)
+(setq backup-by-copying t)
 
 (setq kept-old-versions 1000)
 (setq kept-new-versions 1000)
