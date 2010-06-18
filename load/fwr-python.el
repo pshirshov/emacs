@@ -27,6 +27,8 @@
 (setq ropemacs-separate-doc-buffer t)
 (setq ropemacs-enable-autoimport   t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+; pysmell is ugly
+;(require 'pysmell)
+;(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
 (provide 'fwr-python)
