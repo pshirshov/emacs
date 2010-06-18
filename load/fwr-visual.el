@@ -38,7 +38,8 @@
 ;(scroll-bar-mode -1)
 
 ;Show newlines at end of file
-(define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
+(if window-system
+    (define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0]))
 (set-default 'indicate-empty-lines 'empty-line)
 
 ;Make C-x b bareable
