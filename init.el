@@ -4,8 +4,8 @@
       (eldir "~/.emacs.d") ; base path for loading elisp files
       (elsource "~/.emacs.d")  ; path to elisp sources
      )
-  (add-to-list 'load-path elsource) ; directory with cache manager
-  (require 'byte-code-cache)
+  ;(add-to-list 'load-path elsource) ; directory with cache manager
+  ;(require 'byte-code-cache)
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Setup load paths
   (defun  add-to-path (dir)
