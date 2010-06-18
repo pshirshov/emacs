@@ -10,12 +10,16 @@
 (setq kept-old-versions 1000)
 (setq kept-new-versions 1000)
 
-(setq backup-directory-alist ( cons '( "." . "~/.saves") backup-directory-alist )) 
- 
+(defvar backup-dir (expand-file-name "~/.cache/emacs/backup/"))
+(defvar autosave-dir (expand-file-name "~/.cache/emacs/autosave/"))
+(setq backup-directory-alist (list (cons ".*" backup-dir)))
+(setq auto-save-list-file-prefix autosave-dir)
+(setq auto-save-file-name-transforms `((".*" ,autosave-dir t)))
+
 (defun force-backup-of-buffer ()
   (let ((buffer-backed-up nil))
     (backup-buffer)))
- 
+
 (add-hook 'before-save-hook  'force-backup-of-buffer)
 
 (provide 'fwr-backup)

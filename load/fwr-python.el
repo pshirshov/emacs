@@ -19,7 +19,10 @@
 (autoload 'pymacs-exec "pymacs" nil t)
 (autoload 'pymacs-load "pymacs" nil t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(pymacs-load "ropemacs" "rope-")
+(unless (fboundp 'rope-code-assist) ; check for ropemacs
+  (pymacs-load "ropemacs" "rope-")) 
+; In normal case ropemacs should be loaded by
+; /usr/share/emacs/site-lisp/site-gentoo.d
 (setq ropemacs-guess-project       t)
 (setq ropemacs-separate-doc-buffer t)
 (setq ropemacs-enable-autoimport   t)
