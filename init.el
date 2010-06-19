@@ -1,3 +1,6 @@
+;(add-to-list 'default-frame-alist '(height . 40))
+;(add-to-list 'default-frame-alist '(width . 120))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Important notes:
 ;; - X support in emacs is required for tabbar
 ;; - Required software: 
@@ -28,7 +31,6 @@
     (normal-top-level-add-subdirs-to-load-path))
 )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (require 'fwr-visual)
 (require 'fwr-tabbar)
 (require 'fwr-hotkeys)
@@ -38,6 +40,7 @@
 (require 'fwr-backup)
 (require 'fwr-latex)
 (require 'init-company-mode)
+(require 'winsize)
 
 ;(desktop-save-mode 1) ; don't work with pymacs
 
