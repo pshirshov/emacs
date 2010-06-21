@@ -81,8 +81,9 @@
 (require 'ibuffer)
 (setq ibuffer-default-sorting-mode 'filename/process)
 (setq ibuffer-always-show-last-buffer t)
-(setq ibuffer-view-ibuffer t)
-(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(setq ibuffer-view-ibuffer nil)
+;(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers 

@@ -39,6 +39,7 @@
 (require 'fwr-yas)
 (require 'fwr-backup)
 (require 'fwr-latex)
+(require 'fwr-dired)
 (require 'init-company-mode)
 (require 'winsize)
 
