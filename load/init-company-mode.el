@@ -1,6 +1,7 @@
 (setq company-idle-delay 0.2)           ;延迟时间
 (setq company-minimum-prefix-length 1)  ;触发补全的字符数量
-(setq company-show-numbers nil)         ;不显示数字
+(setq company-show-numbers t)         ;不显示数字
+(setq company-begin-commands '(self-insert-command))
 (dolist (hook (list
                'emacs-lisp-mode-hook
                'lisp-mode-hook
