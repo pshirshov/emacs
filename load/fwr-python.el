@@ -11,10 +11,10 @@
              (setq outline-regexp "def\\|class ")
         )
 )
-;(add-hook 'python-mode-hook
-;          (lambda ()
-;            (whitespace-mode t)
-;))
+(add-hook 'python-mode-hook
+          (lambda ()
+            (whitespace-cleanup)
+))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'pymacs)
 (autoload 'pymacs-apply "pymacs")
