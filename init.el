@@ -31,6 +31,7 @@
     (normal-top-level-add-subdirs-to-load-path))
 )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'winsize)
 (require 'fwr-visual)
 (require 'fwr-tabbar)
 (require 'fwr-hotkeys)
@@ -42,7 +43,6 @@
 (require 'fwr-erlang)
 (require 'fwr-dired)
 (require 'init-company-mode)
-(require 'winsize)
 
 ;(desktop-save-mode 1) ; don't work with pymacs
 
