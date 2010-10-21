@@ -88,7 +88,9 @@
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers 
 
-(setq whitespace-style '(trailing lines-tail space-after-tab space-before-tab tab-mark indentations))
+;(setq whitespace-style '(trailing lines-tail space-after-tab space-before-tab tab-mark indentations))
+(setq whitespace-style '(trailing space-after-tab space-before-tab tab-mark indentations empty))
+
 (require 'whitespace)
 (global-whitespace-mode)
 
