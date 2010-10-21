@@ -35,4 +35,10 @@
 ;(require 'pysmell)
 ;(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
+(require 'ipython)
+(setq py-python-command-args '( "-colors" "Linux"))
+(defadvice py-execute-buffer (around python-keep-focus activate)
+"return focus to python code buffer"
+(save-excursion ad-do-it))
+
 (provide 'fwr-python)
