@@ -11,6 +11,7 @@
 ;;     or 
 ;;    hg clone from http://bitbucket.org/agr/ropemode
 ;;   ) -- obsolete
+;; - Use export TERM=xterm-256color !
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Paths
 (let (
