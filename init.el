@@ -17,8 +17,6 @@
       (eldir "~/.emacs.d") ; base path for loading elisp files
       (elsource "~/.emacs.d")  ; path to elisp sources
      )
-  ;(add-to-list 'load-path elsource) ; directory with cache manager
-  ;(require 'byte-code-cache)
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Setup load paths
   (defun  add-to-path (dir)
@@ -33,25 +31,28 @@
 )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'winsize)
+(require 'fwr-backup)
 (require 'fwr-visual)
 (require 'fwr-tabbar)
 (require 'fwr-hotkeys)
+(require 'fwr-dired)
+(require 'fwr-python-safe)
+
+; Comment out unneeded
 (require 'fwr-python)
 (require 'fwr-flymake)
 (require 'fwr-yas)
-(require 'fwr-backup)
 (require 'fwr-latex)
 (require 'fwr-erlang)
-(require 'fwr-dired)
 (require 'init-company-mode)
+
+(require 'session)
+(add-hook 'after-init-hook 'session-initialize)
 
 ;(desktop-save-mode 1) ; don't work with pymacs
 
 ;(require  'wcy-desktop)
 ;(wcy-desktop-init)
-
-(require 'session)
-(add-hook 'after-init-hook 'session-initialize)
 
 ;(add-hook 'find-file-hook 'company-mode)
 ;(require 'auto-complete)
