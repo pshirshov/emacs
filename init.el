@@ -39,7 +39,7 @@
 (require 'fwr-dired)
 (require 'fwr-python-safe)
 
-; Comment out unneeded
+; Comment out unwanted
 (require 'fwr-python)
 (require 'fwr-flymake)
 (require 'fwr-yas)

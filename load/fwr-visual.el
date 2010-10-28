@@ -85,11 +85,34 @@
 ;(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers 
 
 ;(setq whitespace-style '(trailing lines-tail space-after-tab space-before-tab tab-mark indentations))
 (setq whitespace-style '(trailing space-after-tab space-before-tab tab-mark indentations empty))
+
+(add-hook 'python-mode-hook
+          #'(lambda ()
+               (setq autopair-handle-action-fns
+                     (list #'autopair-default-handle-action
+                           #'autopair-python-triple-quote-action))))
+(add-hook 'latex-mode-hook
+          #'(lambda ()
+              (set (make-local-variable 'autopair-handle-action-fns)
+                   (list #'autopair-default-handle-action
+                         #'autopair-latex-mode-paired-delimiter-action))))
+(add-hook 'emacs-lisp-mode-hook
+          #'(lambda ()
+              (push '(?` . ?')
+                    (getf autopair-extra-pairs :comment))
+              (push '(?` . ?')
+                    (getf autopair-extra-pairs :string))))
+(add-hook 'c++-mode-hook
+          #'(lambda ()
+              (push ?{
+                    (getf autopair-dont-pair :comment))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'whitespace)
 (global-whitespace-mode)

@@ -1,4 +1,5 @@
 *.elc
+*.el.old
 *~
 ac-comphist.dat
 geometry
