@@ -9,7 +9,7 @@
 (load "color-theme")
 (if window-system
        (color-theme-infodoc)
-;       (color-theme-clarity))
+       (color-theme-clarity)
 )
 
 ;(require 'pager)

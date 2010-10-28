@@ -7,13 +7,26 @@
 (global-set-key (kbd "ESC <left>") 'tabbar-backward-tab)
 (global-set-key (kbd "ESC <right>") 'tabbar-forward-tab)
 
+(load "color-theme")
+(if window-system
+  (custom-set-faces
+     '(tabbar-default ((t (:background "gray90" :foreground "gray50" :box (:line-width 3 :color "gray90") :height 100))))
+     '(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
+     '(tabbar-button-highlight ((t (:inherit tabbar-default :background "white" :box (:line-width 2 :color "white")))))
+     '(tabbar-selected ((t (:inherit tabbar-default :foreground "blue" :weight bold))))
+     )
+  (custom-set-faces
+     '(tabbar-default ((t (:foreground "yellow" :background "darkslateblue" :box (:line-width -1 :style released-button)))))
+     '(tabbar-selected ((t (:inherit tabbar-default :foreground "yellow" :weight bold))))
+     ;'(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
+     ;'(tabbar-button-highlight ((t (:inherit tabbar-default :background "white" :box (:line-width 2 :color "white")))))
+     )
+)
+
 (custom-set-faces
- '(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
- '(tabbar-button-highlight ((t (:inherit tabbar-default :background "white" :box (:line-width 2 :color "white")))))
- '(tabbar-default ((t (:background "gray90" :foreground "gray50" :box (:line-width 3 :color "gray90") :height 100))))
+ '(tabbar-unselected ((t (:inherit tabbar-default))))
  '(tabbar-highlight ((t (:underline t))))
- '(tabbar-selected ((t (:inherit tabbar-default :foreground "blue" :weight bold))))
- '(tabbar-unselected ((t (:inherit tabbar-default)))))
+)
 
 
 ;(set-face-foreground 'tabbar-default "LightSteelBlue")
